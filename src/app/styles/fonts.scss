@@ -1,0 +1,49 @@
+@font-face {
+    font-weight: normal;
+    font-style: normal;
+    font-family: Wix;
+    src:
+        url("../../shared/assets/fonts/WixMadeforDisplay-Regular.woff2") format("woff2"),
+        url("../../shared/assets/fonts/WixMadeforDisplay-Regular.woff") format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-weight: 500;
+    font-style: normal;
+    font-family: Wix;
+    src:
+        url("../../shared/assets/fonts/WixMadeforDisplay-Medium.woff2") format("woff2"),
+        url("../../shared/assets/fonts/WixMadeforDisplay-Medium.woff") format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-weight: 600;
+    font-style: normal;
+    font-family: Wix;
+    src:
+        url("../../shared/assets/fonts/WixMadeforDisplay-SemiBold.woff2") format("woff2"),
+        url("../../shared/assets/fonts/WixMadeforDisplay-SemiBold.woff") format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-weight: 700;
+    font-style: normal;
+    font-family: Wix;
+    src:
+        url("../../shared/assets/fonts/WixMadeforDisplay-Bold.woff2") format("woff2"),
+        url("../../shared/assets/fonts/WixMadeforDisplay-Bold.woff") format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-weight: 800;
+    font-style: normal;
+    font-family: Wix;
+    src:
+        url("../../shared/assets/fonts/WixMadeforDisplay-ExtraBold.woff2") format("woff2"),
+        url("../../shared/assets/fonts/WixMadeforDisplay-ExtraBold.woff") format("woff");
+    font-display: swap;
+}
