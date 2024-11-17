@@ -3,7 +3,6 @@ import axios from 'axios';
 export const axiosInstance = axios.create({
     baseURL: '/api',
     headers: {
-        // eslint-disable-next-line @typescript-eslint/naming-convention
         'Content-Type': 'application/json',
     },
 });

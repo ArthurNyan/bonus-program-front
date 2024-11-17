@@ -1,1 +1,1 @@
-export { axiosInstance } from './axiosInstance.js';
+export { axiosInstance } from './axiosInstance';
