@@ -57,6 +57,7 @@ node_modules
 /redis/*
 .husky/
 /dist
+/scripts
 .env
 
 storybook-static

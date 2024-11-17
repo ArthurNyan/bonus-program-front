@@ -14,6 +14,7 @@ export const routeConfig: Record<RootRoutesEnum, TAppRoutesProps> = {
     [RootRoutesEnum.RootLayout]: {
         path: '/',
         element: <RootLayout />,
+        authOnly: true,
         nestedRoutes: {
             [AppRoutesEnum.Main]: {
                 path: '/',

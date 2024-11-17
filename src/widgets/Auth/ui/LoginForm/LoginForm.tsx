@@ -1,7 +1,10 @@
-import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { Button, Checkbox, Group, Text, TextInput, Title } from '@mantine/core';
 import { useForm } from '@mantine/form';
 import cn from 'classnames';
+
+import { useLogin } from '../../hooks/useLogin';
 
 import cls from './styles.module.scss';
 
@@ -10,6 +13,9 @@ type TLoginForm = {
 };
 
 export const LoginForm = ({ className }: TLoginForm) => {
+    const { isSuccess, mutate } = useLogin();
+    const navigate = useNavigate();
+
     const form = useForm({
         mode: 'uncontrolled',
         initialValues: {
@@ -25,6 +31,12 @@ export const LoginForm = ({ className }: TLoginForm) => {
         },
     });
 
+    useEffect(() => {
+        if (isSuccess) {
+            navigate('/');
+        }
+    }, [isSuccess, navigate]);
+
     return (
         <div className={cn(className, cls.login_form)}>
             <div>
@@ -33,7 +45,7 @@ export const LoginForm = ({ className }: TLoginForm) => {
                     Hey there, welcome back!
                 </Text>
             </div>
-            <form onSubmit={form.onSubmit((values) => console.log(values))}>
+            <form onSubmit={form.onSubmit(({ email, password }) => mutate({ login: email, password }))}>
                 <TextInput withAsterisk label="Email" key={form.key('email')} {...form.getInputProps('email')} />
                 <TextInput
                     mt="md"
